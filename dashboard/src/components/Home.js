@@ -9,7 +9,7 @@ export default function Home() {
 
   useEffect(() => {
   axios
-    .get("http://localhost:3002/api/auth/check-session", {
+    .get("https://stock-1-slqt.onrender.com/api/auth/check-session", {
       withCredentials: true,
     })
     .then((res) => {

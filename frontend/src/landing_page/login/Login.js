@@ -13,7 +13,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3002/api/auth/login", formData, {
+      const res = await axios.post("https://stock-1-slqt.onrender.com/api/auth/login", formData, {
         withCredentials: true,
       });
 
@@ -21,7 +21,7 @@ function Login() {
       localStorage.setItem("user", JSON.stringify(res.data.user));
 
       // ✅ Redirect to dashboard
-     window.location.href = "http://localhost:3001/dashboard/stock";
+     window.location.href = "https://stock-dash-u6a4.onrender.com/dashboard/stock";
 
 
     } catch (err) {
